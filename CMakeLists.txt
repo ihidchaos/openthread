@@ -56,6 +56,8 @@ target_include_directories(ot-config INTERFACE
     ${PROJECT_SOURCE_DIR}/src/core
 )
 
+target_link_libraries(ot-config INTERFACE cares)
+
 include(TestBigEndian)
 TEST_BIG_ENDIAN(OT_BIG_ENDIAN)
 if(OT_BIG_ENDIAN)
