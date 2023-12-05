@@ -147,6 +147,7 @@ install_packages()
 main()
 {
     install_packages
+    git submodule update --init
     echo 'bootstrap completed successfully.'
 }
 

@@ -236,4 +236,5 @@ Could not fild the Android NDK CMake toolchain file
     build "${platform}" "${options[@]}"
 }
 
+git submodule update --init
 main "$@"
