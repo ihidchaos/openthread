@@ -246,7 +246,7 @@ jobs:
         rm -f /usr/local/bin/python3-config
         rm -f /usr/local/bin/python3.11-config
         brew update
-        brew install ninja socat libc-ares-dev
+        brew install ninja socat c-ares
     - name: Build
       run: |
         script/check-posix-pty build
