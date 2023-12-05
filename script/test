@@ -406,7 +406,8 @@ do_build_otbr_docker()
 
         docker build -t "${otbr_docker_image}" -f etc/docker/Dockerfile . \
             "${docker_build_args[@]}" \
-            --build-arg OTBR_OPTIONS="${otbr_options[*]}"
+            --build-arg OTBR_OPTIONS="${otbr_options[*]}" \
+            -e OTBR_BUILD_DEPS="libc-ares-dev"
     )
 
     rm -rf "${otbrdir}"

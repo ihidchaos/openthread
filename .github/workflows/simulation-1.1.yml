@@ -112,8 +112,9 @@ jobs:
         submodules: true
     - name: Bootstrap
       run: |
+        sudo dpkg --add-architecture i386
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y lcov ninja-build g++-multilib python3-setuptools python3-wheel libc-ares-dev
+        sudo apt-get --no-install-recommends install -y lcov ninja-build g++-multilib python3-setuptools python3-wheel libc-ares-dev:i386
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
       run: |
@@ -162,8 +163,9 @@ jobs:
         submodules: true
     - name: Bootstrap
       run: |
+        sudo dpkg --add-architecture i386
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y lcov ninja-build g++-multilib python3-setuptools python3-wheel libc-ares-dev
+        sudo apt-get --no-install-recommends install -y lcov ninja-build g++-multilib python3-setuptools python3-wheel libc-ares-dev:i386
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
       run: |
@@ -205,8 +207,9 @@ jobs:
         submodules: true
     - name: Bootstrap
       run: |
+        sudo dpkg --add-architecture i386
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y g++-multilib lcov ninja-build python3-setuptools python3-wheel libc-ares-dev
+        sudo apt-get --no-install-recommends install -y g++-multilib lcov ninja-build python3-setuptools python3-wheel libc-ares-dev:i386
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
       run: |
