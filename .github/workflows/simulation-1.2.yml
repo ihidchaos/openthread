@@ -77,7 +77,7 @@ jobs:
       run: |
         sudo dpkg --add-architecture i386
         sudo apt-get update
-        sudo apt-get --no-install-recommends install -y clang-10 clang++-10 ninja-build python3-setuptools python3-wheel llvm lcov
+        sudo apt-get --no-install-recommends install -y clang-10 clang++-10 ninja-build python3-setuptools python3-wheel llvm lcov libc-ares-dev
         sudo apt-get --no-install-recommends install -y g++-multilib libreadline-dev:i386 libncurses-dev:i386
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
@@ -137,7 +137,7 @@ jobs:
     - name: Bootstrap
       run: |
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y g++-multilib python3-setuptools python3-wheel ninja-build lcov
+        sudo apt-get --no-install-recommends install -y g++-multilib python3-setuptools python3-wheel ninja-build lcov libc-ares-dev
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
       run: |
@@ -207,7 +207,7 @@ jobs:
     - name: Bootstrap
       run: |
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y g++-multilib python3-setuptools python3-wheel ninja-build lcov
+        sudo apt-get --no-install-recommends install -y g++-multilib python3-setuptools python3-wheel ninja-build lcov libc-ares-dev
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
       run: |
@@ -250,7 +250,7 @@ jobs:
         submodules: true
     - name: Bootstrap
       run: |
-        sudo apt-get --no-install-recommends install -y expect ninja-build lcov socat
+        sudo apt-get --no-install-recommends install -y expect ninja-build lcov socat libc-ares-dev
     - name: Run RCP Mode
       run: |
         ulimit -c unlimited
@@ -299,7 +299,7 @@ jobs:
     - name: Bootstrap
       run: |
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y libreadline6-dev g++-multilib ninja-build python3-setuptools python3-wheel llvm lcov
+        sudo apt-get --no-install-recommends install -y libreadline6-dev g++-multilib ninja-build python3-setuptools python3-wheel llvm lcov libc-ares-dev
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
       run: |
