@@ -77,7 +77,7 @@ jobs:
     - name: Bootstrap
       run: |
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y ninja-build lcov
+        sudo apt-get --no-install-recommends install -y ninja-build lcov libc-ares-dev
     - name: Build Simulation
       run: ./script/cmake-build simulation
     - name: Test Simulation
