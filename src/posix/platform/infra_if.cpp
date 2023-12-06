@@ -649,6 +649,7 @@ const uint8_t      InfraNetif::kValidNat64PrefixLength[]  = {96, 64, 56, 48, 40,
 
 void InfraNetif::DiscoverNat64PrefixDone(void *arg, int status, int timeouts, struct hostent *host)
 {
+    (void)arg;
     (void)timeouts;
 
     otIp6Prefix prefix = {};
