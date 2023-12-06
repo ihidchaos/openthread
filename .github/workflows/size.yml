@@ -59,7 +59,7 @@ jobs:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       run: |
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y ninja-build lcov libc-ares-dev
+        sudo apt-get --no-install-recommends install -y ninja-build lcov
     - name: Run
       env:
         OT_BASE_BRANCH: "${{ github.base_ref }}"

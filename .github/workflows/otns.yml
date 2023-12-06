@@ -73,7 +73,7 @@ jobs:
     - name: Bootstrap
       run: |
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y g++-multilib lcov ninja-build libc-ares-dev
+        sudo apt-get --no-install-recommends install -y g++-multilib lcov ninja-build
     - name: Run
       run: |
         export OT_DIR=$PWD
@@ -112,7 +112,7 @@ jobs:
       - name: Bootstrap
         run: |
           sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-          sudo apt-get --no-install-recommends install -y g++-multilib lcov ninja-build libc-ares-dev
+          sudo apt-get --no-install-recommends install -y g++-multilib lcov ninja-build
       - name: Run
         run: |
           export OT_DIR=$PWD
@@ -174,7 +174,7 @@ jobs:
       - name: Bootstrap
         run: |
           sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-          sudo apt-get --no-install-recommends install -y g++-multilib lcov ninja-build libc-ares-dev
+          sudo apt-get --no-install-recommends install -y g++-multilib lcov ninja-build
       - name: Run
         run: |
           export OT_DIR=$PWD

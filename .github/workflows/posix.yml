@@ -59,7 +59,7 @@ jobs:
     - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
     - name: Bootstrap
       run: |
-        sudo apt-get --no-install-recommends install -y expect ninja-build lcov socat libc-ares-dev
+        sudo apt-get --no-install-recommends install -y expect ninja-build lcov socat
     - name: Run RCP Mode
       run: |
         ulimit -c unlimited
@@ -145,7 +145,7 @@ jobs:
     - name: Bootstrap
       run: |
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y lcov ninja-build python3-setuptools python3-wheel libc-ares-dev
+        sudo apt-get --no-install-recommends install -y lcov ninja-build python3-setuptools python3-wheel
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
       run: |
@@ -187,7 +187,7 @@ jobs:
     - name: Bootstrap
       run: |
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y socat expect lcov net-tools ninja-build libc-ares-dev
+        sudo apt-get --no-install-recommends install -y socat expect lcov net-tools ninja-build
         cd /tmp
         wget https://github.com/obgm/libcoap/archive/bsd-licensed.tar.gz
         tar xvf bsd-licensed.tar.gz
@@ -267,7 +267,7 @@ jobs:
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       run: |
-        sudo apt-get --no-install-recommends install -y expect ninja-build lcov socat libc-ares-dev
+        sudo apt-get --no-install-recommends install -y expect ninja-build lcov socat
         sudo python3 -m pip install git+https://github.com/openthread/pyspinel
     - name: Build
       run: |

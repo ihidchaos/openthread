@@ -65,7 +65,7 @@ jobs:
     - name: Bootstrap
       run: |
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y g++-multilib python3-setuptools python3-wheel ninja-build lcov libc-ares-dev
+        sudo apt-get --no-install-recommends install -y g++-multilib python3-setuptools python3-wheel ninja-build lcov
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
       run: |
@@ -114,7 +114,7 @@ jobs:
       run: |
         sudo dpkg --add-architecture i386
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y lcov ninja-build g++-multilib python3-setuptools python3-wheel libc-ares-dev:i386
+        sudo apt-get --no-install-recommends install -y lcov ninja-build g++-multilib python3-setuptools python3-wheel
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
       run: |
@@ -165,7 +165,7 @@ jobs:
       run: |
         sudo dpkg --add-architecture i386
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y lcov ninja-build g++-multilib python3-setuptools python3-wheel libc-ares-dev:i386
+        sudo apt-get --no-install-recommends install -y lcov ninja-build g++-multilib python3-setuptools python3-wheel
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
       run: |
@@ -209,7 +209,7 @@ jobs:
       run: |
         sudo dpkg --add-architecture i386
         sudo rm /etc/apt/sources.list.d/* && sudo apt-get update
-        sudo apt-get --no-install-recommends install -y g++-multilib lcov ninja-build python3-setuptools python3-wheel libc-ares-dev:i386
+        sudo apt-get --no-install-recommends install -y g++-multilib lcov ninja-build python3-setuptools python3-wheel
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
       run: |
@@ -245,7 +245,7 @@ jobs:
     - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
     - name: Bootstrap
       run: |
-        sudo apt-get --no-install-recommends install -y expect ninja-build lcov socat libc-ares-dev
+        sudo apt-get --no-install-recommends install -y expect ninja-build lcov socat
     - name: Run
       run: |
         ulimit -c unlimited
@@ -290,7 +290,7 @@ jobs:
       run: |
         sudo rm /etc/apt/sources.list.d/*
         sudo apt-get update
-        sudo apt-get install -y avahi-daemon avahi-utils lcov libc-ares-dev
+        sudo apt-get install -y avahi-daemon avahi-utils lcov
         script/git-tool clone https://github.com/openthread/ot-commissioner.git /tmp/ot-commissioner --depth 1 --branch main
     - name: Build
       run: |
@@ -338,7 +338,7 @@ jobs:
         submodules: true
     - name: Bootstrap
       run: |
-        sudo apt-get --no-install-recommends install -y lcov ninja-build python3-setuptools python3-wheel libc-ares-dev
+        sudo apt-get --no-install-recommends install -y lcov ninja-build python3-setuptools python3-wheel
         python3 -m pip install -r tests/scripts/thread-cert/requirements.txt
     - name: Build
       run: |
