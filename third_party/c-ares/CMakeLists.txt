@@ -7,6 +7,12 @@ set(CARES_BUILD_TOOLS OFF)
 
 add_subdirectory(repo)
 
+target_compile_options(c-ares 
+    PRIVATE 
+    
+        "-Wno-sign-conversion"
+)
+
 target_include_directories(c-ares
     PUBLIC
     
