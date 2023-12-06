@@ -11,6 +11,7 @@ target_compile_options(c-ares
     PRIVATE 
     
         "-Wno-error"
+        "-Wno-dev"
 )
 
 target_include_directories(c-ares
