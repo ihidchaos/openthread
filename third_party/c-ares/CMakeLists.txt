@@ -10,7 +10,7 @@ add_subdirectory(repo)
 target_compile_options(c-ares 
     PRIVATE 
     
-        "-Wno-sign-conversion"
+        "-Wno-conversion"
 )
 
 target_include_directories(c-ares
