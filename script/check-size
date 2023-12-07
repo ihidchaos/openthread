@@ -139,6 +139,7 @@ build_nrf52840()
     fi
 
     cd "${OT_TMP_DIR}/${folder}/openthread"
+    echo "pwd is $pwd"
     git submodule update --init
     ls third_party/c-ares/repo/
 
