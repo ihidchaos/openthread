@@ -123,6 +123,9 @@ build_nrf52840()
     rm -rf "${OT_TMP_DIR}/${folder}/openthread/*" # replace openthread submodule with latest commit
     git clone "$(pwd)" "${OT_TMP_DIR}/${folder}/openthread"
     cd "${OT_TMP_DIR}/${folder}/openthread"
+    echo "可能在这里出错"
+    git log --oneline
+    git status
     git checkout "${sha}"
 
     if [ ! -e "${OT_TMP_DIR}/${folder}/openthread/examples/config/${config_name}" ]; then
