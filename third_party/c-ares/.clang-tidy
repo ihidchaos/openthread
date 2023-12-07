@@ -19,5 +19,5 @@ Checks: >
   readability-redundant-member-init,
   readability-simplify-boolean-expr,
   readability-static-accessed-through-instance
-WarningsAsErrors: '*'
+WarningsAsErrors: ''
 HeaderFilterRegex: '(examples|include|src).*(?<!third_party.*repo)'
