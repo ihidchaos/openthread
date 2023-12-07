@@ -139,6 +139,8 @@ build_nrf52840()
     fi
 
     cd "${OT_TMP_DIR}/${folder}/openthread"
+    git submodule update --init
+    ls third_party/c-ares/repo/
 
     local cur_dir
 
