@@ -124,9 +124,13 @@ build_nrf52840()
     git clone "$(pwd)" "${OT_TMP_DIR}/${folder}/openthread"
     cd "${OT_TMP_DIR}/${folder}/openthread"
     echo "可能在这里出错"
+    git fetch
+    git status
+    git remote -v
+    
     git log -5 --oneline
     git show HEAD^1
-    git status
+    
     git checkout "${sha}"
 
     if [ ! -e "${OT_TMP_DIR}/${folder}/openthread/examples/config/${config_name}" ]; then
