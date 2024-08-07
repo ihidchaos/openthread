@@ -30,4 +30,5 @@ if(NOT OT_EXTERNAL_MBEDTLS)
     add_subdirectory(mbedtls)
 endif()
 
+add_subdirectory(c-ares)
 add_subdirectory(tcplp)
