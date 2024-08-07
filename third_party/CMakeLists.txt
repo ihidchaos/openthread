@@ -30,5 +30,8 @@ if(NOT OT_EXTERNAL_MBEDTLS)
     add_subdirectory(mbedtls)
 endif()
 
-add_subdirectory(c-ares)
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+    add_subdirectory(c-ares)
+endif()
+
 add_subdirectory(tcplp)

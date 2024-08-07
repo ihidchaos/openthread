@@ -1,19 +1,16 @@
-project("c-ares" C)
-
 set(CARES_STATIC ON CACHE BOOL "Build as a static library" FORCE)
 set(CARES_SHARED OFF CACHE BOOL "Build as a shared library" FORCE)
 set(CARES_INSTALL OFF CACHE BOOL "Create installation targets (chain builders may want to disable this)" FORCE)
 set(CARES_STATIC_PIC ON CACHE BOOL "Build the static library as PIC (position independent)" FORCE)
 
-add_library(c-ares STATIC repo)
+add_subdirectory(repo)
 
 target_compile_options(c-ares 
     PRIVATE 
+    
         "-Wno-error"
         "-Wno-dev"
 )
-
-set_target_properties(c-ares PROPERTIES OUTPUT_NAME cares)
 
 target_include_directories(c-ares
     PUBLIC
