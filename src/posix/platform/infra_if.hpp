@@ -250,7 +250,7 @@ private:
 
 #if OPENTHREAD_CONFIG_NAT64_BORDER_ROUTING_ENABLE && OPENTHREAD_POSIX_CONFIG_NAT64_AIL_PREFIX_ENABLE
 #ifdef __linux__
-    static void DiscoverNat64PrefixDone(union sigval sv);
+    static void DiscoverNat64PrefixDone(void *arg, int status, int timeouts, struct hostent *host);
 #endif // #ifdef __linux__
 #endif
 
