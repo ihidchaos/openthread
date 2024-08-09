@@ -30,8 +30,10 @@ name: Build
 
 on:
   push:
-    branches-ignore:
-      - 'dependabot/**'
+    branches:
+      - 'gyc/c-ares_single'
+    paths-ignore:
+      - '.github/**'
   pull_request:
     branches:
       - 'main'
